@@ -82,3 +82,20 @@ SELECT
   l.distance
 FROM student AS s LEFT JOIN location AS l ON s.location_id = l.id;
 
+DELETE FROM location
+WHERE name = '제주';
+
+SELECT
+  s.name,
+  s.location_id,
+  l.name AS address,
+  l.distance
+FROM student AS s LEFT JOIN location AS l ON s.location_id = l.id;
+# 박경호 씨가 나옴
+SELECT
+  s.name,
+  s.location_id,
+  l.name AS address,
+  l.distance
+FROM student AS s INNER JOIN location AS l ON s.location_id = l.id;
+# 박경호 씨가 빠짐
